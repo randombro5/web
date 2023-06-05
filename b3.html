@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //. Implement a JavaScript promise to perform arithmetic operations. Display result for each operation synchronously using await () method. (Give delay in each promise object using settimeout() method). 
+function add(a, b) {
+ return new Promise((resolve, reject) => {
+ setTimeout(() => {
+ if (typeof a !== 'number' || typeof b !== 'number') {
+ reject(new Error('Invalid arguments. Please enter valid numbers.'));
+ } else {
+ resolve(a + b);
+ }
+ }, 1000); 
+ });
+}
+// Function to perform subtraction
+function subtract(a, b) {
+ return new Promise((resolve, reject) => {
+ setTimeout(() => {
+ if (typeof a !== 'number' || typeof b !== 'number') {
+ reject(new Error('Invalid arguments. Please enter valid numbers.'));
+ } else {
+ resolve(a - b);
+ }
+ }, 1500); // adding a delay of 1.5 seconds using setTimeout()
+ });
+}
+// Function to perform multiplication
+function multiply(a, b) {
+ return new Promise((resolve, reject) => {
+ setTimeout(() => {
+ if (typeof a !== 'number' || typeof b !== 'number') {
+ reject(new Error('Invalid arguments. Please enter valid numbers.'));
+ } else {
+ resolve(a * b);
+ }
+ }, 2000); // adding a delay of 2 seconds using setTimeout()
+ });
+}
+// Function to perform division
+function divide(a, b) {
+ return new Promise((resolve, reject) => {
+ setTimeout(() => {
+ if (typeof a !== 'number' || typeof b !== 'number') {
+ reject(new Error('Invalid arguments. Please enter valid numbers.'));
+ } else if (b === 0) {
+ reject(new Error('Division by zero is not allowed.'));
+ } else {
+ resolve(a / b);
+ }
+ }, 2500); // adding a delay of 2.5 seconds using setTimeout()
+ });
+}
+// Calling the arithmetic functions using the promise objects and displaying the result synchronously using the await keyword
+async function performOperations(a, b) {
+ try {
+ const sum = await add(a, b);
+ console.log(`Sum: ${sum}`);
+ const difference = await subtract(a, b);
+ console.log(`Difference: ${difference}`);
+ const product = await multiply(a, b);
+ console.log(`Product: ${product}`);
+ const quotient = await divide(a, b);
+ console.log(`Quotient: ${quotient}`);
+ } catch (err) {
+ console.log(err.message);
+ }
+}
+// Testing the performOperations function with sample arguments
+performOperations(10, 5);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //. Write an arrow function named sumEvens that accepts an array of numbers and returns the sum of the even numbers in the array. 
+        let sum=0;
+const reverseNumber = (numb) => {
+ for(let i=0;i<numb.length;i++)
+{
+ if(numb[i]%2==0)
+ {
+ sum=sum+numb[i];
+ }
+ }
+ return sum;
+}
+const givenNumber = [1,2,4,6,8,3,5,7];
+const sumeve = reverseNumber(givenNumber);
+alert(sumeve);
+
+    </script>
+</body>
+</html>

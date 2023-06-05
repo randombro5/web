@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // . Write a JavaScript code to insert and remove elements from the array for the given index                            
+let array = [1, 2, 3, 4, 5];
+
+function insertElement(array, index, element) {
+  array.splice(index, 0, element);
+}
+
+function removeElement(array, index) {
+  array.splice(index, 1);
+}
+
+console.log("Original Array:", array); 
+
+insertElement(array, 2, 6);
+console.log("Array after inserting element:", array); 
+
+removeElement(array, 4);
+console.log("Array after removing element:", array); 
+
+    </script>
+</body>
+</html>

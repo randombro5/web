@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //. Show how set is different from array to store the value with coding example and prove Sets perform better than Arrays in most of the scenarios involving searching values present in it.                                               
+        //First we need to show Set deletes repeated values
+const mySet = new Set(Array.from({length: 100000}, (_, i) => i));
+// Creating an Array with 100,000 unique values
+const myArray = Array.from({length: 100000}, (_, i) => i);
+console.time("set-search");
+mySet.has(99999);
+console.timeEnd("set-search"); 
+console.time("array-search");
+myArray.includes(99999);
+console.timeEnd("array-search"); 
+    </script>
+</body>
+</html>

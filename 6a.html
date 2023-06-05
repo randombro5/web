@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sort String Alphabetically</title>
+</head>
+<body>
+<label for="inputString">Enter a string:</label>
+<input type="text" id="inputString">
+<button id="sortBtn">Sort Alphabetically</button>
+<p id="output"></p>
+<script>
+    //. Write a JavaScript code that returns a passed string with letters in alphabetical order. Use addEventListener() method. 
+// Get the input string and sort it alphabetically on button click
+document.getElementById("sortBtn").addEventListener("click", 
+function() {
+const inputString = 
+document.getElementById("inputString").value;
+const sortedString = inputString.split("").sort().join("");
+document.getElementById("output").textContent = "Sorted string: " + sortedString;
+});
+</script>
+</body>
+</html>

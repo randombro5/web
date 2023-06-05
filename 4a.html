@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //. Write a program to store values into a map, and to retrieve value from the map using key, to iterate over the map 
+const myMap = new Map();
+myMap.set('key1', 'value1');
+myMap.set('key2', 'value2');
+myMap.set('key3', 'value3');
+alert(myMap.get('key2')); 
+for (const [key, value] of myMap) {
+alert(`${key} = ${value}`);
+}
+
+    </script>
+</body>
+</html>

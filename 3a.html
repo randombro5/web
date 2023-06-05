@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 3. Write a program to store values into a set, and to retrieve value from the set, to iterate over the set   CO2, 4
+let mySet = new Set();
+mySet.add("apple");
+mySet.add("banana");
+mySet.add("cherry");
+alert(mySet.has("banana"));
+alert(mySet.has("orange")); 
+alert(mySet.size); 
+mySet.delete("banana");
+mySet.forEach(function(value) {
+ alert(value);
+});
+mySet.clear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //. Write JavaScript code to encrypt the text using Caesar Cipher technique. Display the encrypted text. Prompt the user for input and the shift pattern.                                                                                
+        let plainText = prompt("Enter text to encrypt:");
+let shift = parseInt(prompt("Enter shift pattern:"));
+let encryptedText = "";
+for(let i=0; i<plainText.length; i++) {
+ let charCode = plainText.charCodeAt(i);
+ let encryptedCharCode = charCode;
+ 
+ if(charCode >= 65 && charCode <= 90) { 
+ encryptedCharCode = ((charCode - 65 + shift) % 26) + 65;
+ }
+ else if(charCode >= 97 && charCode <= 122) { 
+ encryptedCharCode = ((charCode - 97 + shift) % 26) + 97;
+ }
+ 
+ encryptedText += String.fromCharCode(encryptedCharCode);
+}
+alert  ("Encrypted text: " + encryptedText);
+
+    </script>
+</body>
+</html>

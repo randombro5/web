@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //blood composition B of the person.        POSITIVE or NEGATIVE?
+
+        function isPositive(virus, blood) {
+  let i = 0;
+  let j = 0;
+  while (i < virus.length && j < blood.length) {
+    if (virus[i] === blood[j]) {
+      j++;
+    }
+    i++;
+  }
+
+  return j === blood.length;
+}
+
+// Example usage
+const virus = "coronavirus";
+const people = ["ravus", "abc", "rona", "uvirus", "coronavirus"];
+
+for (const person of people) {
+  console.log(`${person}: ${isPositive(virus, person) ? 'POSITIVE' : 'NEGATIVE'}`);
+}
+
+        
+    </script>
+</body>
+</html>
